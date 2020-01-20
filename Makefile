@@ -12,9 +12,10 @@ GOFMT_CHECK=$(shell find . -not \( \( -wholename './.*' -o -wholename '*/vendor/
 REV=$(shell git describe --long --tags --match='v*' --always --dirty)
 
 # Container image-related variables
-DOCKERFILE=Dockerfile
-IMAGE_TAG=openshift/origin-cluster-node-tuning-operator
+DOCKERFILE=Dockerfile.rhel7
+IMAGE_TAG=jugs/cluster-node-tuning-operator
 IMAGE_REGISTRY=quay.io
+USE_BUILDAH=true
 
 all: build
 
